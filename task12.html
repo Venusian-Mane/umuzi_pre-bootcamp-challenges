@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Task 12</title>
+    <link rel="stylesheet" type="text/css" href="task12.css" />
+    <script type="text/javascript" src="task12.js"></script>
+  </head>
+
+  <body>
+    <div id="Header">
+      <h1 class="mainHead">Umuzi Pre-bootcamp challenge: Task12 - GUI</h1>
+      <br />
+      <p>
+        This is the final challenge of the Umuzi Pre-bootcamp challenges and I
+        have been asked to create a User Interface for all the functions I had
+        created in the other challenges. All of the function will be used and
+        implemented on this page.
+        <br />
+        <br />
+        I am moderately experienced in front-end web development (including
+        certain libraries and frameworks such as jQuery, ReactJS, JSX and
+        Node.js) but I saw Umuzi as an opportunity to grow my skills even more
+        because honestly coding is my passion. So this page and the code behind
+        it is proudly made by me, Manelisi Madini.
+      </p>
+    </div>
+    <br />
+    <div class="tasksect" id="task1sect">
+      <h2>Task 1: Printing out variables</h2>
+      <p>
+        This task asked me to simply print out the variables that were inputted.
+        The default values for x and y are 0 and 1 respectively. As given in the
+        instruction, no matter what the value of X is, Y will always be the
+        amount of X bigger than Y (ie. y = y + x). Test the function below and
+        watch the results carefully to understand the values outputted.
+      </p>
+      <br />
+      <fieldset>
+        <legend>X Value</legend>
+        <input type="text" id="x-var" value="0" />
+        <button id="x-button" onclick="printXValue()">
+          Print out variable
+        </button>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Y Value</legend>
+        <input type="text" id="y-var" value="1" />
+        <button id="y-button" onclick="printYValue()">
+          Print out variable
+        </button>
+      </fieldset>
+    </div>
+    <br />
+    <div class="tasksect" id="task2sect">
+      <h2>Task 2: Printing out BODMAS operations</h2>
+      <p>
+        This task asked me to type down pseudocode and understand what means. So
+        ill just type down the equations and their answers.
+      </p>
+      <br />
+      <div>
+        <fieldset name="calculator">
+          <legend>Equations</legend>
+          <label id="equation1">x = 1 + 1 * 2</label>
+          <input type="text" id="display1" disabled />
+          <button onclick="display1.value=eval(1+1*2)">
+            Calculate
+          </button>
+          <br />
+          <label id="equation2">y = (1 + 1) * 2</label>
+          <input type="text" id="display2" disabled />
+          <button onclick="display2.value=eval((1 + 1) * 2)">
+            Calculate
+          </button>
+          <br />
+          <label id="equation3">z = 1 + 1 * 2</label>
+          <input type="text" id="display3" disabled />
+          <button onclick="display3.value=eval(1 + 1 * 2)">
+            Calculate
+          </button>
+          <br />
+          <label id="equation4">a = 1 + (1 * 2) / 2</label>
+          <input type="text" id="display4" disabled />
+          <button onclick="display4.value=eval(1 + (1 * 2) / 2)">
+            Calculate
+          </button>
+          <br />
+          <label id="equation5">b = (1 + 1 * 2) / 2</label>
+          <input type="text" id="display5" disabled />
+          <button onclick="display5.value=eval((1 + 1 * 2) / 2)">
+            Calculate
+          </button>
+        </fieldset>
+      </div>
+    </div>
+    <br />
+    <div class="tasksect" id="task3sect">
+      <h2>Task 3: Checking for the number 65</h2>
+      <p>
+        In this task I was asked to create a function that take in 2 numbers as
+        input. If either of the numbers is equal 65 or if the sum of the 2
+        numbers is 65, then the function must return true. So the program below
+        checks for that
+      </p>
+      <br />
+      <fieldset>
+        <legend>Checking for 65</legend>
+        <input id="check65_num1" placeholder="Type a Number..." />
+        <input id="check65_num2" placeholder="Type a Number..." />
+        <label id="result65"></label>
+        <br />
+        <button onclick="numChecker()">
+          Check for 65
+        </button>
+      </fieldset>
+    </div>
+    <br />
+    <div class="tasksect" id="task4sect">
+      <h2>Task 4: Checking for the number 3</h2>
+      <p>
+        In this task I was asked to create a function that takes 2 numbers as
+        input and if either of the numbers is a 3 or if the sum of the numbers
+        has a 3 in it, it returns true. Otherwise would return false
+      </p>
+      <br />
+      <fieldset>
+        <legend>Checking for 3's</legend>
+        <input id="check3_num1" type="text" placeholder="type a number..." />
+        <input id="check3_num2" type="text" placeholder="type a number..." />
+        <label id="result3"></label>
+        <br />
+        <button onclick="threeChecker()">Check for 3's</button>
+      </fieldset>
+    </div>
+    <br />
+    <div class="tasksect" id="task5sect">
+      <h2>Task 5: Calculating the area of a triangle</h2>
+      <p>
+        In this task I was asked to create a function that calculates the area
+        of a triangle given that all the lengths of the triangles are provided.
+      </p>
+      <br />
+      <fieldset>
+        <legend>Trianlge Area Calculation</legend>
+        <input id="triSide1" type="text" placeholder="type a length..." />
+        <input id="triSide2" type="text" placeholder="type a length..." />
+        <input id="triSide3" type="text" placeholder="type a length..." />
+        <label id="triResult"></label>
+        <br />
+        <button onclick="triangleArea()">Calculate Area</button>
+      </fieldset>
+    </div>
+    <br />
+    <div class="tasksect" id="task6sect">
+      <h2>Task 6: Finding the biggest number</h2>
+      <p>
+        This tasked asked me to create a function that will output the highest
+        number out of 3 numbers that are inputted to the function. This part
+        takes in 3 numbers and simply outputs the largest number.
+      </p>
+      <br />
+      <fieldset>
+        <legend>Biggest Number</legend>
+        <input id="bigNum1" type="text" placeholder="type a number..." />
+        <input id="bigNum2" type="text" placeholder="type a number..." />
+        <input id="bigNum3" type="text" placeholder="type a number..." />
+        <label id="bigNumResult"></label>
+        <br />
+        <button onclick="highestNum()">Find The Biggest Number</button>
+      </fieldset>
+    </div>
+    <br />
+    <div class="tasksect" id="task7sect">
+      <h2>Task 7: Temperature Conversion</h2>
+      <p>
+        This tasked asked me to create functions that will convert temperatures
+        from Celcius to Farhreheit and vice versa.
+      </p>
+      <br />
+      <fieldset>
+        <legend>Converting Temperatures</legend>
+        <label>Celcius</label>
+        <input
+          id="fahrInput"
+          type="text"
+          placeholder="Temperature in celcius..."
+        />
+        <label id="fahrOutput"></label><br />
+        <button onclick="fahrenheitConvert()">Convert To Fahrenheit</button>
+        <br />
+        <br />
+        <label>Fahrenheit</label>
+        <input
+          id="celciusInput"
+          type="text"
+          placeholder="Temperature in fahrenheit..."
+        />
+        <label id="celciusOutput"></label><br />
+        <button onclick="celciusConvert()">Convert To Celcius</button>
+      </fieldset>
+    </div>
+    <br />
+    <div class="tasksect" id="task8sect">
+      <h2>Task 8: Time Translating</h2>
+      <p>
+        In this task, I was asked to create a function that would convert any
+        amount of minutes in time to a sentence that translates and described
+        the time in hours and minutes. Below you may enter any a time in minutes
+        and it'll be translated to hours and minutes.
+      </p>
+      <br />
+      <fieldset>
+        <legend>Time Translation</legend>
+        <input id="time1" type="text" placeholder="type a number..." />
+        <label id="timeOutput"></label>
+        <br />
+        <button onclick="minuteConvert()">Translate</button>
+      </fieldset>
+    </div>
+    <br />
+    <div class="tasksect" id="task9sect">
+      <h2>Task 9: Sum of the multiples of 5 and 3 (to 1000)</h2>
+      <p>
+        This tasked simply asked me to print out the sum of the multiples of 3
+        and 5 up to 1000. Below you'll see the result.
+      </p>
+      <br />
+      <fieldset>
+        <legend>Sum Of Multiples</legend>
+        <label>This is the sum of the multiples of 3 and 5 up to 1000</label>
+        <br />
+        <label id="multiplesResult"></label><br />
+        <button onclick="multipleSum()">Show Sum</button>
+      </fieldset>
+    </div>
+    <br />
+    <div class="tasksect" id="task10sect">
+      <h2>Task 10: Vowel Searching</h2>
+      <p>
+        In this task, I was asked t create a function that takes in a string as
+        input and output the vowels in the given string. Below you may input a
+        string and the resulting vowels of that string will be outputted.
+      </p>
+      <br />
+      <fieldset>
+        <legend>Vowel Search</legend>
+        <input id="vowelString" type="text" placeholder="type something..." />
+        <label id="vowelOutput"></label><br />
+        <button onclick="vowelSearch()">Search Vowels</button>
+      </fieldset>
+    </div>
+    <br />
+    <div class="tasksect" id="task11sect">
+      <h2>Task 11: Finding Common Characters In Strings</h2>
+      <p>
+        This task asked me to find the common characters between 2 inputted
+        strings. They characters must only be listed once. Below function that
+        finds the common characters in 2 different strings.
+      </p>
+      <br />
+      <fieldset>
+        <legend>Finding Common Characters</legend>
+        <input id="string1" type="text" placeholder="type something..." />
+        <input id="string2" type="text" placeholder="type something..." /><br />
+        <label id="commonChars"></label>
+        <br />
+        <button onclick="commonChar()">Find Common Characters</button>
+      </fieldset>
+    </div>
+  </body>
+</html>
